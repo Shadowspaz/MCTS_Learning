@@ -358,6 +358,33 @@ public class GameHandler
         return r;
     }
 
+    public void SetGameState(GameState state, bool updateVisual = false)
+    {
+        boardState = CopyBoard(state.boardState);
+
+        blueCards = new List<MoveCard>();
+        redCards = new List<MoveCard>();
+        activePlayer = state.activePlayer;
+
+        if (activePlayer == Player.Red)
+        {
+            blueCards.Add(state.myCards[0]);
+            blueCards.Add(state.myCards[1]);
+            redCards.Add(state.yourCards[0]);
+            redCards.Add(state.yourCards[1]);
+        } else {
+            redCards.Add(state.myCards[0]);
+            redCards.Add(state.myCards[1]);
+            blueCards.Add(state.yourCards[0]);
+            blueCards.Add(state.yourCards[1]);
+        }
+
+        flexCard = state.flexCard;
+
+        if (updateVisual)
+            ApplyToVisual(activePlayer == topOfBoard);
+    }
+
     void CheckForWin()
     {
         // If your master occupies the opponent master's start space

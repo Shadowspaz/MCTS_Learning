@@ -726,7 +726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1464320253}
   cardPrefab: {fileID: 3516581578457410797, guid: 59a828958d572ed4cbef59af3d5547ca, type: 3}
-  deck: {fileID: 11400000, guid: b97d682243ca38b43b89edc935777b4f, type: 2}
+  deck: {fileID: 11400000, guid: ee80cea725f521e40b10db73d6e47318, type: 2}
   cellPrefab: {fileID: 4862733084540374579, guid: d4f021859db3c134080ae3d5eb0d5665, type: 3}
   cellSize: 100
   cellPadding: 10
@@ -757,6 +757,7 @@ MonoBehaviour:
     startPlayer: 0
     activePlayer: 0
     topOfBoard: 1
+  analysisMove: 0
   p_autoPlay: 1
   timeToNextGame: 1
 --- !u!1 &2036408972

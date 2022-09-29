@@ -96,7 +96,7 @@ namespace MCTS
                 // If game ended, set value to the maximum
                 if (simulation.gameState != GameStatus.Playing)
                 // Active player changes immediately after move. So if Blue wins, the active player will be Red
-                    return (simulation.activePlayer != game.activePlayer ? 1f : -1f);
+                    return 10f * (simulation.activePlayer != game.activePlayer ? 1f : -1f);
             }
 
             float boardSum = 0;

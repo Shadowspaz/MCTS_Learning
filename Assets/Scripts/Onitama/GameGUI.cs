@@ -70,7 +70,12 @@ public class GameGUI : MonoBehaviour
         }
     }
 
+    [Header("Game")]
     public GameHandler game;
+    private Coroutine betweenGamesCo = null;
+    private bool enterAnalysisMode = false;
+    private bool analysisMode = false;
+    [SerializeField] private int analysisMove;  
 
     // Automatically start the next game
     [SerializeField] private bool p_autoPlay;
@@ -100,17 +105,68 @@ public class GameGUI : MonoBehaviour
 
     void Update()
     {
-        if (autoPlay)
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (analysisMode)
+            {
+                analysisMode = false;
+                StartNewGame();
+            }
+            else enterAnalysisMode = true;
+        }
+
+        if (analysisMode)
+        {
+            AnalysisModeInput();
+        }
+
+        if (autoPlay && !analysisMode)
         {
             if (game.gameState != GameStatus.Playing)
             {
-                if (!startingNextGame)
+                if (enterAnalysisMode)
                 {
-                    Invoke("StartNewGame", timeToNextGame);
+                    enterAnalysisMode = false;
+                    analysisMode = true;
+                    analysisMove = game.gameHistory.Count - 1;
+                }
+                else if (!startingNextGame)
+                {
+                    if (null == betweenGamesCo) betweenGamesCo = StartCoroutine(WaitingRoutine());
                     startingNextGame = true;
                 }
             }
         }
+    }
+
+    private IEnumerator WaitingRoutine()
+    {
+        float startTime = Time.time;
+        while (Time.time - startTime < timeToNextGame)
+        {
+            if (analysisMode)
+            {
+                betweenGamesCo = null;
+                yield break;
+            }
+            yield return null;
+        }
+
+        StartNewGame();
+        betweenGamesCo = null;
+        yield break;
+    }
+
+    private void AnalysisModeInput()
+    {
+        int next = 0;
+        if (Input.GetKeyDown(KeyCode.LeftArrow)) next = -1;
+        else if (Input.GetKeyDown(KeyCode.RightArrow)) next = 1;
+
+        if (next == 0) return;
+
+        analysisMove = Mathf.Clamp(analysisMove + next, 0, game.gameHistory.Count - 1);
+        game.SetGameState(game.gameHistory[analysisMove], true);
     }
 
     void StartNewGame()
@@ -334,6 +390,8 @@ public class GameGUI : MonoBehaviour
 
     public void BackOut()
     {
+        if (autoPlay) return;
+
         if (game.gameState != GameStatus.Playing)
         {
             StartNewGame();

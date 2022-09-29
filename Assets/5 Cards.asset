@@ -10,37 +10,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5be08203fa52eba44bf167372239205b, type: 3}
-  m_Name: PassOnlyDeck
+  m_Name: 5 Cards
   m_EditorClassIdentifier: 
   deck:
   - id: 0
-    name: Useless Crab
+    name: Tanuki
     availableMoves:
-    - {x: -1, y: 0}
-    - {x: 1, y: 0}
-    startPlayer: 0
+    - {x: 0, y: 1}
+    - {x: 2, y: 1}
+    - {x: -1, y: -1}
+    startPlayer: 1
   - id: 1
-    name: Dead Crab
+    name: Crane
     availableMoves:
-    - {x: -1, y: 0}
-    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: -1, y: -1}
+    - {x: 1, y: -1}
     startPlayer: 1
   - id: 2
-    name: Bad Crab
+    name: Elephant
     availableMoves:
+    - {x: -1, y: 1}
+    - {x: 1, y: 1}
     - {x: -1, y: 0}
     - {x: 1, y: 0}
     startPlayer: 0
   - id: 3
-    name: Sad Crab
+    name: Viper
     availableMoves:
-    - {x: -1, y: 0}
-    - {x: 1, y: 0}
-    startPlayer: 1
-  - id: 4
-    name: Special Crab
-    availableMoves:
-    - {x: -1, y: 0}
-    - {x: 1, y: 0}
-    - {x: 0, y: 2}
+    - {x: 0, y: 1}
+    - {x: -2, y: 0}
+    - {x: 1, y: -1}
     startPlayer: 0
+  - id: 4
+    name: Bear
+    availableMoves:
+    - {x: 0, y: 1}
+    - {x: -1, y: 1}
+    - {x: 1, y: -1}
+    startPlayer: 1

@@ -13,199 +13,231 @@ MonoBehaviour:
   m_Name: Movement_Deck_bkup
   m_EditorClassIdentifier: 
   deck:
-  - name: Tanuki
+  - id: 0
+    name: Tanuki
     availableMoves:
     - {x: 0, y: 1}
     - {x: 2, y: 1}
     - {x: -1, y: -1}
     startPlayer: 1
-  - name: Crane
+  - id: 1
+    name: Crane
     availableMoves:
     - {x: 0, y: 1}
     - {x: -1, y: -1}
     - {x: 1, y: -1}
     startPlayer: 1
-  - name: Elephant
+  - id: 2
+    name: Elephant
     availableMoves:
     - {x: -1, y: 1}
     - {x: 1, y: 1}
     - {x: -1, y: 0}
     - {x: 1, y: 0}
     startPlayer: 0
-  - name: Viper
+  - id: 3
+    name: Viper
     availableMoves:
     - {x: 0, y: 1}
     - {x: -2, y: 0}
     - {x: 1, y: -1}
     startPlayer: 0
-  - name: Bear
+  - id: 4
+    name: Bear
     availableMoves:
     - {x: 0, y: 1}
     - {x: -1, y: 1}
     - {x: 1, y: -1}
     startPlayer: 1
-  - name: Crab
+  - id: 5
+    name: Crab
     availableMoves:
     - {x: 0, y: 1}
     - {x: -2, y: 0}
     - {x: 2, y: 0}
     startPlayer: 1
-  - name: Ox
+  - id: 6
+    name: Ox
     availableMoves:
     - {x: 0, y: 1}
     - {x: 1, y: 0}
     - {x: 0, y: -1}
     startPlayer: 1
-  - name: Rat
+  - id: 7
+    name: Rat
     availableMoves:
     - {x: 0, y: 1}
     - {x: -1, y: 0}
     - {x: 1, y: -1}
     startPlayer: 0
-  - name: Boar
+  - id: 8
+    name: Boar
     availableMoves:
     - {x: 0, y: 1}
     - {x: -1, y: 0}
     - {x: 1, y: 0}
     startPlayer: 0
-  - name: Cobra
+  - id: 9
+    name: Cobra
     availableMoves:
     - {x: 1, y: 1}
     - {x: 1, y: -1}
     - {x: -1, y: 0}
     startPlayer: 0
-  - name: Otter
+  - id: 10
+    name: Otter
     availableMoves:
     - {x: -1, y: 1}
     - {x: 1, y: -1}
     - {x: 2, y: 0}
     startPlayer: 0
-  - name: Goose
+  - id: 11
+    name: Goose
     availableMoves:
     - {x: -1, y: 1}
     - {x: -1, y: 0}
     - {x: 1, y: 0}
     - {x: 1, y: -1}
     startPlayer: 1
-  - name: Giraffe
+  - id: 12
+    name: Giraffe
     availableMoves:
     - {x: -2, y: 1}
     - {x: 2, y: 1}
     - {x: 0, y: -1}
     startPlayer: 1
-  - name: Rooster
+  - id: 13
+    name: Rooster
     availableMoves:
     - {x: 1, y: 1}
     - {x: 1, y: 0}
     - {x: -1, y: 0}
     - {x: -1, y: -1}
     startPlayer: 0
-  - name: Horse
+  - id: 14
+    name: Horse
     availableMoves:
     - {x: 0, y: 1}
     - {x: -1, y: 0}
     - {x: 0, y: -1}
     startPlayer: 0
-  - name: Monkey
+  - id: 15
+    name: Monkey
     availableMoves:
     - {x: -1, y: 1}
     - {x: 1, y: 1}
     - {x: -1, y: -1}
     - {x: 1, y: -1}
     startPlayer: 1
-  - name: Rabbit
+  - id: 16
+    name: Rabbit
     availableMoves:
     - {x: -1, y: -1}
     - {x: 1, y: 1}
     - {x: 2, y: 0}
     startPlayer: 1
-  - name: Phoenix
+  - id: 17
+    name: Phoenix
     availableMoves:
     - {x: -1, y: 1}
     - {x: 1, y: 1}
     - {x: -2, y: 0}
     - {x: 2, y: 0}
     startPlayer: 1
-  - name: Mouse
+  - id: 18
+    name: Mouse
     availableMoves:
     - {x: 0, y: 1}
     - {x: 1, y: 0}
     - {x: -1, y: -1}
     startPlayer: 1
-  - name: Iguana
+  - id: 19
+    name: Iguana
     availableMoves:
     - {x: -2, y: 1}
     - {x: 0, y: 1}
     - {x: 1, y: -1}
     startPlayer: 0
-  - name: Dog
+  - id: 20
+    name: Dog
     availableMoves:
     - {x: -1, y: 1}
     - {x: -1, y: 0}
     - {x: -1, y: -1}
     startPlayer: 1
-  - name: Kirin
+  - id: 21
+    name: Kirin
     availableMoves:
     - {x: -1, y: 2}
     - {x: 1, y: 2}
     - {x: 0, y: -2}
     startPlayer: 0
-  - name: Tiger
+  - id: 22
+    name: Tiger
     availableMoves:
     - {x: 0, y: 2}
     - {x: 0, y: -1}
     startPlayer: 1
-  - name: Panda
+  - id: 23
+    name: Panda
     availableMoves:
     - {x: 0, y: 1}
     - {x: 1, y: 1}
     - {x: -1, y: -1}
     startPlayer: 0
-  - name: Fox
+  - id: 24
+    name: Fox
     availableMoves:
     - {x: 1, y: 1}
     - {x: 1, y: 0}
     - {x: 1, y: -1}
     startPlayer: 0
-  - name: Eel
+  - id: 25
+    name: Eel
     availableMoves:
     - {x: -1, y: 1}
     - {x: 1, y: 0}
     - {x: -1, y: -1}
     startPlayer: 1
-  - name: Frog
+  - id: 26
+    name: Frog
     availableMoves:
     - {x: -2, y: 0}
     - {x: -1, y: 1}
     - {x: 1, y: -1}
     startPlayer: 0
-  - name: Turtle
+  - id: 27
+    name: Turtle
     availableMoves:
     - {x: -2, y: 0}
     - {x: -1, y: -1}
     - {x: 1, y: -1}
     - {x: 2, y: 0}
     startPlayer: 0
-  - name: Sable
+  - id: 28
+    name: Sable
     availableMoves:
     - {x: -2, y: 0}
     - {x: -1, y: -1}
     - {x: 1, y: 1}
     startPlayer: 1
-  - name: Dragon
+  - id: 29
+    name: Dragon
     availableMoves:
     - {x: -2, y: 1}
     - {x: -1, y: -1}
     - {x: 1, y: -1}
     - {x: 2, y: 1}
     startPlayer: 0
-  - name: Mantis
+  - id: 30
+    name: Mantis
     availableMoves:
     - {x: -1, y: 1}
     - {x: 0, y: -1}
     - {x: 1, y: 1}
     startPlayer: 0
-  - name: Sea Snake
+  - id: 31
+    name: Sea Snake
     availableMoves:
     - {x: 0, y: 1}
     - {x: 2, y: 0}
